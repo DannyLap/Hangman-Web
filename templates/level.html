@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{.Title}}</title>
+    <link rel="stylesheet" href="/style/style.css">
+    <style>
+        body{
+            background: linear-gradient(to right,#2c5364, #203a43, #0f2027);
+        }
+        .box1 {
+            display: flex;
+            flex-direction: column;
+            width: auto;
+            height: auto;
+            justify-content: center;
+            align-items: center;
+        }
+        .box2 {
+            display: flex;
+        }
+        p {
+            color: white;
+            font-size: 3em;
+        }
+        a.button {
+            display: inline-block;
+            padding: 0.3em 1.2em;
+            margin: 0 0.3em 0.3em 0;
+            border-radius: 2em;
+            box-sizing: border-box;
+            text-decoration: none;
+            font-size: 2em;
+            color: #FFFFFF;
+            background-color: #4eb5f1;
+            text-align: center;
+            transition: all 0.2s;
+        }
+        a.button:hover {
+            background-color: #4095c6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <p>Quel difficulté choisir ?</p>
+        <div class="box2">
+            <a href="http://localhost:8080/game" class="button">Easy</a>
+            <a href="http://localhost:8080/game" class="button">Medium</a>
+            <a href="http://localhost:8080/game" class="button">Hard</a>
+        </div>
+    </div>
+
+
+
+</body>
+</html>

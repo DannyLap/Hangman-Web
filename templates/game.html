@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <style>
+        .boxTitre{
+            border: 10px;
+            width : 500px;
+            height: 120px;
+            margin: auto;
+            position: absolute; top: 15%; left:50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 6rem;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .boxVie{
+            border: 4px;
+            width : 250px;
+            height: 30px;
+            position: absolute; top: 30%; left:50%;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        .boxVieNb{
+            border: 4px;
+            width : 250px;
+            height: 50px;
+            position: absolute; top: 35%; left:50%;
+            transform: translate(-50%, -50%);
+            font-size: 4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        .boxMotATrouver {
+            border: 4px;
+            width: 250px;
+            height: 50px;
+            font-size: 3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            position: absolute; top: 45%; left:50%;
+            transform: translate(-50%, -50%);
+        }
+        body{
+            background: linear-gradient(to right,#2c5364, #203a43, #0f2027);
+        }
+        form {
+            position: absolute; top: 60%; left:50%;
+            transform: translate(-50%, -50%);
+        }
+        a {
+            text-decoration: none;
+            display: block;
+            background-color: white;
+            width: 10em;
+            height: 2em;
+        }
+        a.button {
+            display: inline-block;
+            padding: 0.3em 1.2em;
+            margin: 0 0.3em 0.3em 0;
+            border-radius: 2em;
+            box-sizing: border-box;
+            text-decoration: none;
+            font-size: 2em;
+            color: #FFFFFF;
+            background-color: #4eb5f1;
+            text-align: center;
+            transition: all 0.2s;
+        }
+        a.button:hover {
+            background-color: #4095c6;
+        }
+        label {
+            font-size: 2em;
+            color: white;
+        }
+        .boxWin{
+            width: 250px;
+            height: 50px;
+            position: absolute; top: 65%; left:50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 4em;
+        }
+        .boxHangman {
+            width: 250px;
+            height: 50px;
+            position: absolute; top: 40%; left:15%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 2.5em;
+        }
+    </style>
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+<body class="body">
+    <p class="boxTitre">{{.Body}}</p>
+    <p class="boxVie">Vies Restantes : </p>
+    <p class="boxVieNb">{{.Life}}</p>
+    <p class="boxMotATrouver">{{ .String2 }}</p>
+    <form action="" method="get" class="form-example">
+        <div class="form-example">
+            <label for="letterValue">Enter a letter : </label>
+            <input type="text" name="letterValue" id="letterValue" required>
+            <input type="submit" id = "btn1", value="Submit">
+        </div>
+    </form>
+    <a href="http://localhost:8080/menu" class="button">Menu</a>
+    <div class="boxHangman">
+        <pre>{{ .Hangmandrawing }}</pre>
+    </div>
+    
+    <p class="boxWin">{{.Win}}</p>
+</body>
+</html>
+
